@@ -1,0 +1,13 @@
+{
+  "name": "trustfence-intent-firewall",
+  "version": "0.1.0",
+  "private": false,
+  "description": "An evidence-first, intent-bound action firewall for AI agents. CyberForge hackathon MVP.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

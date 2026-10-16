@@ -1,0 +1,14 @@
+flowchart LR
+  U[Trusted user request] --> C[Intent contract]
+  D[Email / ticket / document] --> P[Untrusted content parser]
+  P --> E[Evidence extraction]
+  C --> G[Deterministic policy gate]
+  E --> G
+  G -->|Out of scope| B[Block + evidence]
+  G -->|Instruction override| H[Human review]
+  G -->|Side effect requested| A[Approval required]
+  G -->|Read-only only| R[Read-only result]
+  B --> L[Audit event]
+  H --> L
+  A --> L
+  R --> L
